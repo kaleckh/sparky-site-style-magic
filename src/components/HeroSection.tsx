@@ -4,6 +4,12 @@ import { Phone, Shield, Clock, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-electrician.jpg";
 
 const HeroSection = () => {
+  const scrollToQuoteForm = () => {
+    const quoteForm = document.getElementById('quote-form');
+    if (quoteForm) {
+      quoteForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section className="relative min-h-screen flex items-center bg-hero-gradient overflow-hidden">
       {/* Background Image with Overlay */}
@@ -60,6 +66,7 @@ const HeroSection = () => {
               variant="heroOutline" 
               size="lg" 
               className="text-lg px-8 py-6 h-auto"
+              onClick={scrollToQuoteForm}
             >
               Get Free Quote
             </Button>
